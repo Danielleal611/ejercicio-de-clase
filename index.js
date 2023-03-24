@@ -1,51 +1,42 @@
-// ejercicio #5
-let MyArray = [1,2,2,3,4,4,4];
-let histograma = [];
-console.log(MyArray)
+var limit = 10;
+var fibo = [0,1];
 
-for(let i = 1; i <= 5; i++){
-    histograma[i] = 0;
-}
+	for(i=2; i <= limit; i++){
+		fibo.push(fibo[i-1] + fibo[i-2]);
+		console.log(fibo[i],"   ",Math.pow(fibo[i], 3));
+   // document.write(Math.pow(fibo[i], 3) + ", ")
+	}
 
-for(let i=0; i<MyArray.length; i++){
-    histograma[MyArray[i]]++;
-}
+  /*import string  //ejercicio realizado en python.
 
-for (let i = 1; i <= 5; i++){
-    console.log(i + ": " + "*".repeat(histograma[i]));
-}
-
-//ejercicio #6
-var myArray, contador, numero;
- 
- myArray = [1,5,5,7,6,7,7,1];
- 
- for (var i=0 in myArray) {
-   for (var a=0 in myArray) {
-     if (myArray[a] > myArray[i]) {
-       numero = myArray[a];
-     }
-   }
-   contador=0
-   for (var b in myArray) {
-     if (numero == myArray[b]) {
-       contador++;
-     }
-   }
-   
- }
- console.log('el numero es '+ numero +' la longitud es '+ contador);
-
-
-// ejercicio #7
-let array = [4,7,8,2,9,1];
-let suma;
-for (var i = 0 in array){
-  for (var x = 0 in array){
-    suma = array[i] + array[x]
-    if (suma == 10){
-      console.log(array[i], array[x]);
+  array = []
+  
+  for i in range(65, 91):
+      array.append(chr(i))
+  
+  
+  for i in range(97, 127):
+      array.append(chr(i))
       
-    }
-  } 
-}
+  
+  palabra = input("Digite El mensaje Olculto \n")
+  
+  corrimiento = int(input("Digite el corrimiento \n"))
+  resultado = ""
+  for i in range(len(palabra)):
+      for j in range(len(array)):
+          if palabra[i]==array[j]:
+              letraFinal = j-corrimiento
+              resultado+=array[letraFinal]
+  print(resultado)
+*/
+
+//ejercicio hecho en python
+
+/*
+lista = [20, 19, 17, 18, 30, 68, 1 ]
+
+for resultado in lista:
+	if resultado  % 2 == 0:
+		print( resultado, "es el resultado divisible entre 2") 
+*/
